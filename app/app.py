@@ -3,10 +3,10 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name)
-app.secret_key = 'tu_clave_secreta'
+app.secret_key = 'proyecto1-de-redes'
 
 # Configura la conexión a la base de datos en el servidor de datos (data-server)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://nombre_de_tu_usuario:tu_contraseña@direccion_IP_data_server:5432/nombre_de_tu_base_de_datos'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:_password123@10.0.0.4:5432/proyectodb'
 db = SQLAlchemy(app)
 
 class User(db.Model):
